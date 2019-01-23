@@ -26,7 +26,7 @@ int main() {
 	int a = sizeof(mystr->giris[0])/sizeof(int); 
 	mystr->girisBoyutu = a;
 
-	//Kullanıcıdan alınan degiskenler
+	
 	
 	int cekirdek_boyut;
 	int kayma_miktari;
@@ -38,8 +38,8 @@ int main() {
 
 	int tut = mystr->girisBoyutu;
 	
-	//Kayma miktari ve cekirdek Boyutunda taşma olup olmadığını kontrol ediyor.
-	//Kontrol fonksiyonu false donerse işleme devam edilemez.
+	//Kayma miktari ve cekirdek Boyutunda taÃ¾ma olup olmadÃ½Ã°Ã½nÃ½ kontrol ediyor.
+	//Kontrol fonksiyonu false donerse iÃ¾leme devam edilemez.
 	if (!Kontrol(cekirdek_boyut, kayma_miktari, tut)) {
 		system("pause");
 		return -1;
@@ -50,7 +50,7 @@ int main() {
 		mystr->girisBoyutu = tut;
 		mystr->cekirdekBoyutu = cekirdek_boyut;						
 		
-		mystr->cekirdek = new int[cekirdek_boyut * cekirdek_boyut]; // cekirdek matrisi iki boyutlu olduğu için karesi kadar elemana sahip
+		mystr->cekirdek = new int[cekirdek_boyut * cekirdek_boyut]; // cekirdek matrisi iki boyutlu olduÃ°u iÃ§in karesi kadar elemana sahip
 		
 
 
@@ -66,13 +66,13 @@ int main() {
 			{
 				cout << "Cekirdek[" << i << "]" << "[" << j << "]" << " = ";
 
-				//cekirdek elemanlarını alıyoruz.İki Boyutlu matris şeklinde
+				//cekirdek elemanlarÃ½nÃ½ alÃ½yoruz.Ãki Boyutlu matris Ã¾eklinde
 				cin >> mystr->cekirdek[i*cekirdek_boyut + j]; 
 			}
-			//cıkıs matrisinin sutun sayisi
+			//cÃ½kÃ½s matrisinin sutun sayisi
 			mystr->cikisBoyutu = (mystr->girisBoyutu - mystr->cekirdekBoyutu) / kayma_miktari + 1;
 
-			//cikis matrisi icin yeni dinamik bir bellek alanımız oluyor.
+			//cikis matrisi icin yeni dinamik bir bellek alanÃ½mÃ½z oluyor.
 			mystr->cikis = new int[mystr->cikisBoyutu*mystr->cikisBoyutu];
 
 			for (int i = 0; i < mystr->cikisBoyutu; i++)
@@ -96,16 +96,16 @@ int main() {
 			{
 				cikis_satir++;
 				//Kayma miktari kadar sutunda ilerliyoruz.
-				for (int j = 0; j <= mystr->girisBoyutu - cekirdek_boyut; j += kayma_miktari) //cikis tek boyutlu dinamik dizinin satir sayisini artırıyoruz
+				for (int j = 0; j <= mystr->girisBoyutu - cekirdek_boyut; j += kayma_miktari) //cikis tek boyutlu dinamik dizinin satir sayisini artÃ½rÃ½yoruz
 				{
-					cikis_sutun++;																//cikis  tek sutun sayisini artırıyoruz.
+					cikis_sutun++;																//cikis  tek sutun sayisini artÃ½rÃ½yoruz.
 					{
 					for (int k = 0; k < cekirdek_boyut; k++)										
 						for (int p = 0; p < cekirdek_boyut; p++)
 						{
 							mystr->cikis[cikis_satir*mystr->cikisBoyutu + cikis_sutun]
-								+= mystr->giris[i + k][j + p] * mystr->cekirdek[k*cekirdek_boyut + p];   // Matris elemanlarımızla cekirdek dizi 
-						}																				//elemanlarının carpimi ve toplanması
+								+= mystr->giris[i + k][j + p] * mystr->cekirdek[k*cekirdek_boyut + p];   // Matris elemanlarÃ½mÃ½zla cekirdek dizi 
+						}																				//elemanlarÃ½nÃ½n carpimi ve toplanmasÃ½
 					}
 				}
 				cikis_sutun = -1;
@@ -138,7 +138,7 @@ int main() {
 
 
 
-//Kayma miktari ve cekirdek Boyutunda taşma olup olmadığını kontrol ediyor.
+//Kayma miktari ve cekirdek Boyutunda taÃ¾ma olup olmadÃ½Ã°Ã½nÃ½ kontrol ediyor.
 
 bool Kontrol(int cekirdek_boyut, int kayma_miktari, int tut) {
 	bool kontrol = false;
