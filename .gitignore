@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+CFortoWhile/CFortoWhile.depend
+CFortoWhile/readme
+Integrate/Integrate.depend
+Starpattern/Kaynak.cpp

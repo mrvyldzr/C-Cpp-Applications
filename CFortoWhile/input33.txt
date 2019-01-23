@@ -1,0 +1,53 @@
+int main() 
+{
+
+int c;
+
+while( a<=24 )
+{
+
+ANnnasn
+
+int b = 0 
+while( b<=24 )
+{
+
+ a++
+}
+ a++
+}
+
+
+int x=0
+while(x<2432)
+{
+asd
+sade
+
+x++
+}
+
+int k = 0
+while( k<12 )
+{
+abcd
+
+int l = 0 
+while( l <3 )
+{
+asdad
+
+ l++
+}
+int z = 0 
+while( z <3 )
+{
+asdad
+
+ z++
+}qwddasd
+
+k++
+}
+return 0;
+}
