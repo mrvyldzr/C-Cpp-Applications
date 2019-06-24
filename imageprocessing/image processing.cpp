@@ -41,7 +41,7 @@ int main() {
 	//Kayma miktari ve cekirdek Boyutunda taþma olup olmadýðýný kontrol ediyor.
 	//Kontrol fonksiyonu false donerse iþleme devam edilemez.
 	if (!Kontrol(cekirdek_boyut, kayma_miktari, tut)) {
-		system("pause");
+		getchar();
 		return -1;
 	}
 	else { // true ise dogrudan devam eder.
@@ -131,7 +131,7 @@ int main() {
 	}
 
 
-	system("pause");
+	getchar();
 	return 0;
 }
 
